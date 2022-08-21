@@ -1,14 +1,23 @@
-# Getting Started with Create React App
+# Simple Connect with Metamask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project created for the demonstrated a simple way to connect to Web3 wallet. In this case with metamask you need to install to the browser metamask. [Metamask install](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en).
 
-## Available Scripts
+## The first Step:
+Let's create a reactjs app.
 
-In the project directory, you can run:
+`npx create-react-app my-app --template typescript`
+
+with template typescript. After this we need to install the library where we use in this project.
+`@web3-react/core @web3-react/injected-connector @web3-react/types ethers`.
+
+
+## Structure folders.
+
+
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\

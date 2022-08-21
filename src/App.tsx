@@ -25,7 +25,7 @@ function App() {
             Network: <span>{network}</span>
           </p>
           <p>
-            Account: <span className="blur hover:blur-none	">{account}</span>
+            Account: <span className="hover:accent-slate-600	">{account}</span>
           </p>
         </div>
       </div>

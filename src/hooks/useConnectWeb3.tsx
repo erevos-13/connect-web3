@@ -1,14 +1,12 @@
 import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3React } from "@web3-react/core";
-import { InjectedConnector } from "@web3-react/injected-connector";
 import { useEffect, useState } from "react";
+import { Injected } from "../utils";
 import { CHAINS } from "../utils/chains";
 
 const useConnectWeb3 = () => {
   const [network, setNetwork] = useState(null);
-  const injectedConnector = new InjectedConnector({
-    supportedChainIds: [1, 3, 4, 5, 42],
-  });
+
   const { chainId, account, activate, active } =
     useWeb3React<Web3Provider>();
   const { ethereum } = window;
@@ -17,7 +15,7 @@ const useConnectWeb3 = () => {
 
   const connectWithWallet = async () => {
     try {
-      activate(injectedConnector);
+      activate(Injected);
     } catch (error) {
       console.log({ error });
     }
