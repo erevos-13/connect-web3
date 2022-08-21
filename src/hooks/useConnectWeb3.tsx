@@ -14,10 +14,7 @@ const useConnectWeb3 = () => {
     useWeb3React<Web3Provider>();
   const { ethereum } = window;
 
-  const getNetWork = () => {
-    const network = CHAINS[chainId as number];
-    setNetwork(network?.name);
-  };
+  const getNetWork = () => {};
 
   const connectWithWallet = async () => {
     try {
@@ -41,8 +38,10 @@ const useConnectWeb3 = () => {
     }
     if (chainId) {
       getNetWork();
+      const network = CHAINS[chainId as number];
+      setNetwork(network?.name);
     }
-  }, [chainId]);
+  }, [account, active, chainId]);
 
   return { checkIsWalletConnected, connectWithWallet, network, account };
 };
