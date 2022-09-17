@@ -4,8 +4,7 @@ import "./App.css";
 import { useConnectWeb3 } from "./hooks/useConnectWeb3";
 import Web3 from "web3";
 function App() {
-  const { checkIsWalletConnected, connectWithWallet, network, account } =
-    useConnectWeb3();
+  const { checkIsWalletConnected, connectWithWallet, network, account } = useConnectWeb3();
 
   useEffect(() => {
     checkIsWalletConnected();
@@ -25,7 +24,7 @@ function App() {
             Network: <span>{network}</span>
           </p>
           <p>
-            Account: <span className="blur hover:blur-none	">{account}</span>
+            Account: <span>{account}</span>
           </p>
         </div>
       </div>

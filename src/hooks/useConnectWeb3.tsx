@@ -9,11 +9,8 @@ const useConnectWeb3 = () => {
   const injectedConnector = new InjectedConnector({
     supportedChainIds: [1, 3, 4, 5, 42],
   });
-  const { chainId, account, activate, active } =
-    useWeb3React<Web3Provider>();
+  const { chainId, account, activate, active } = useWeb3React<Web3Provider>();
   const { ethereum } = window;
-
-  const getNetWork = () => {};
 
   const connectWithWallet = async () => {
     try {
@@ -35,7 +32,6 @@ const useConnectWeb3 = () => {
       console.log(account);
     }
     if (chainId) {
-      getNetWork();
       const network = CHAINS[chainId as number];
       setNetwork(network?.name);
     }
